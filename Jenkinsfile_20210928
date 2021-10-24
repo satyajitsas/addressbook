@@ -29,7 +29,7 @@ pipeline {
   }
   stage ('update kubernetes deployment') {
    steps {
-    sh 'kubectl set image deployment addressbook-deployment himanshu185/addressbook:20210928.7=himanshu185/addressbook:20210928.$BUILD_NUMBER --record'
+    sh 'kubectl set image deployment addressbook-deployment addressbook=himanshu185/addressbook:20210928.$BUILD_NUMBER --record'
    }
   }
  }
